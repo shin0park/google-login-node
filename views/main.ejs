@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <title>로그인</title>
+</head>
+
+<body>
+    <div style="padding:40px;"></div>
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Home</h1>
+        <div class="button">
+            <% if(!user){ %>
+            <button type="button" class="btn btn-default" onclick="toLogin()">Login</button>
+            <% } else { %>
+            <button type="button" class="btn btn-default" onclick="toLogout()">Logout</button>
+            <% } %>
+        </div>
+    </div>
+    <script>
+        toLogin = () => {
+            location.href = './auth/login';
+        };
+        toLogout = () => {
+            location.href = './auth/logout';
+        };
+    </script>
+</body>
+
+</html>
